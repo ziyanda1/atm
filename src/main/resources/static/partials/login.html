@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="card">
+    <div class="card-header">
+        <h4>{{vm.atm.name}}</h4>
+        <small>{{vm.atm.location}}</small>
+    </div>
+    <div class="card-body">
+        <form name="ATMLoginForm">
+            <div class="form-group">
+                <label for="number">Card number</label>
+                <input id="number" class="form-control" ng-model="vm.cardProfile.number" type="text" required/>
+            </div>
+            <div class="form-group">
+                <label for="pin">Pin</label>
+                <input id="pin" class="form-control" ng-model="vm.cardProfile.pin" type="password"  required/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default btn-block" ng-disabled="ATMLoginForm.$invalid" ng-click="vm.doLogin()">Login</button>
+            </div>
+        </form>
+    </div>
+    </div>
+</div>
+

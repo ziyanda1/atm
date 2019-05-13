@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h6>Collect Cash</h6>
+        </div>
+        <div class="card-body">
+            <table class="table table-dark">
+                <thead>
+                <tr>
+                    <th scope="col">Denomination Description (Note)</th>
+                    <th scope="col">Count</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="fund in vm.funds">
+                    <td>{{fund.denomination.denominationType.description}}</td>
+                    <td>{{fund.count}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-success float-right" ng-click="vm.done()">Done</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+
+    <div class="card">
+        <div class="card-header">
+            <h6>Draw from account</h6>
+        </div>
+        <div class="card-body">
+            <div class="content">
+                <p><b>Type:</b>   {{vm.selectedAccount.accountType.description}}</p>
+                <p><b>Number:</b> {{vm.selectedAccount.accountNumber}}</p>
+            </div>
+            <hr class="hr"/>
+            <form name="withdrawCashForm">
+                <div class="form-group">
+                    <label for="amount">Required Amount</label>
+                    <input type="number" ng-model="vm.amount" class="form-control" id="amount" required>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-success float-right" ng-disabled="withdrawCashForm.$invalid" ng-click="vm.withdraw()">Witdraw</button>
+            <button class="btn btn-default float-right" style="margin-right: 5px;" ng-click="vm.goToWithdrawalAccounts()">Back</button>
+        </div>
+    </div>
+
+
+</div>
